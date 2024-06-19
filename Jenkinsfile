@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     def name = params.NAME
-                    writeFile file: 'result.txt', text: "Hello ${name}"
+                    writeFile file: 'result.txt', text: "Hell\o ${name}"
                 }
             }
         }
