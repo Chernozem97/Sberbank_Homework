@@ -12,22 +12,20 @@ pipeline {
     }
     environment {
         GIT_URL = 'https://github.com/Chernozem97/Sberbank_Homework.git'
-        GIT_CREDENTIALS_ID = 'github-credentials'
+        MY_CRED = crendentials('github-credentials')
     }
 
     stages{
         stage('Greet') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]){
                         def name = params.NAME
-                        def credentials = "Username: ${GIT_USERNAME}\nPassword: ${GIT_PASSWORD}"
+                        def credentials = "Username: ${MY_CRED_USR}\nPassword: ${MY_CRED_PSW}"
                         writeFile file: 'result.txt', text: "hello ${name}\n${credentials}"
                     }
                 }
             }
         }
-    }
 
     post {
         success {
