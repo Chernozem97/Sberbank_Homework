@@ -6,7 +6,10 @@ pipeline {
     parameters {
         string(name: 'NAME', defaultValue: 'World', description: 'Name to greet')
     }
-
+    
+    triggers {
+      cron 'H/1 * * * *'
+    }
     environment {
         GIT_URL = 'https://github.com/Chernozem97/Sberbank_Homework.git'
     }
@@ -26,10 +29,6 @@ pipeline {
                 }
             }
         }
-    }
-
-    triggers {
-      pollSCM 'H/1 * * * *'
     }
 
     post {
