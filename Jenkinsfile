@@ -28,6 +28,10 @@ pipeline {
         }
     }
 
+    triggers {
+      pollSCM 'H/1 * * * *'
+    }
+
     post {
         success {
             archiveArtifacts artifacts: 'result.txt', onlyIfSuccessful: true
