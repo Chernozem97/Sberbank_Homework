@@ -14,12 +14,6 @@ pipeline {
         GIT_URL = 'https://github.com/Chernozem97/Sberbank_Homework.git'
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git url: "${env.GIT_URL}", branch: 'main'
-            }
-        }
 
         stage('Greet') {
             steps {
