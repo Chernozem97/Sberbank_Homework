@@ -8,7 +8,7 @@ pipeline {
     }
     
     triggers {
-      pollSCM '* * * * *'
+      pollSCM 'H/3 * * * *'
     }
     environment {
         GIT_URL = 'https://github.com/Chernozem97/Sberbank_Homework.git'
