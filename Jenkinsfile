@@ -1,5 +1,7 @@
 pipeline {
-    agent default
+    agenх {
+        label 'default'
+    }
 
     parameters {
         string(name: 'NAME', defaultValue: 'World', description: 'Name to greet')
