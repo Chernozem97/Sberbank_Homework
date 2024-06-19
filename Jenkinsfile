@@ -1,5 +1,5 @@
 pipeline {
-    agenх {
+    agent {
         label 'default'
     }
 
