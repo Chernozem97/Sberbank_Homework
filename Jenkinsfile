@@ -14,14 +14,15 @@ pipeline {
         GIT_URL = 'https://github.com/Chernozem97/Sberbank_Homework.git'
     }
 
-
-    stage('Greet') {
+    stages{
+        stage('Greet') {
             steps {
                 script {
                     def name = params.NAME
                     writeFile file: 'result.txt', text: "hello ${name}"
                 }
             }
+        }
     }
 
     post {
