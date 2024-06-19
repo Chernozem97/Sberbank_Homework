@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     def name = params.NAME
-                    writeFile file: 'result.txt', text: "ello ${name}"
+                    writeFile file: 'result.txt', text: "hello ${name}"
                 }
             }
         }
