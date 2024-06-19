@@ -8,7 +8,7 @@ pipeline {
     }
     
     triggers {
-      cron 'H/1 * * * *'
+      pollSCM '* * * * *'
     }
     environment {
         GIT_URL = 'https://github.com/Chernozem97/Sberbank_Homework.git'
