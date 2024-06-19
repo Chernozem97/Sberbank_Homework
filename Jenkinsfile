@@ -22,7 +22,6 @@ pipeline {
                     writeFile file: 'result.txt', text: "hello ${name}"
                 }
             }
-        }
     }
 
     post {
