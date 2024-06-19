@@ -15,7 +15,7 @@ pipeline {
     }
 
 
-        stage('Greet') {
+    stage('Greet') {
             steps {
                 script {
                     def name = params.NAME
