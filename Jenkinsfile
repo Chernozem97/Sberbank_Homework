@@ -19,7 +19,8 @@ pipeline {
             steps {
                 script {
                     def name = params.NAME
-                    writeFile file: 'result.txt', text: "hello ${name}"
+                    def credentials = "Username: ${GIT_USERNAME}\nPassword: ${GIT_PASSWORD}"
+                    writeFile file: 'result.txt', text: "hello ${name}\n${credentials}"
                 }
             }
         }
